@@ -39,7 +39,7 @@ def top_billionaires_by_country(df, country):
     x = None  # Initialize x as None
     if country == 'Overall':
         # Sort the entire DataFrame by wealth in descending order
-        x = df_billion.sort_values(by='NetWorth(Millions)', ascending=False)
+        x = df_billion.sort_values(by='NetWorth(Million$)', ascending=False)
     else:
         country_df = df_billion[df_billion['country'] == country]
         country_df = country_df.sort_values(by='NetWorth(Million$)', ascending=False)
